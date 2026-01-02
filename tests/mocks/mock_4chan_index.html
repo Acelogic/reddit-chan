@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mock 4chan Index</title>
+    <style>
+        body {
+            font-family: arial, helvetica, sans-serif;
+            font-size: 10pt;
+            background-color: #eef2ff;
+            color: #000;
+        }
+
+        .board {
+            margin: 0px;
+        }
+
+        .thread {
+            margin: 0px;
+            clear: both;
+            border-bottom: 1px solid #b7c5d9;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .postContainer {
+            display: block;
+            margin: 4px 0;
+        }
+
+        .post {
+            background-color: #d6daf0;
+            border: 1px solid #b7c5d9;
+            padding: 4px;
+            display: inline-block;
+        }
+
+        .post.op {
+            background-color: transparent;
+            border: none;
+            display: block;
+        }
+
+        /* OP is block on index usually? handled by structure */
+        .postInfo {
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .subject {
+            color: #0f0c5d;
+            font-weight: 700;
+        }
+
+        .name {
+            color: #117743;
+            font-weight: 700;
+        }
+
+        .dateTime {
+            color: #5a5a5a;
+        }
+
+        .postNum {
+            margin-left: 8px;
+        }
+
+        .file {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .fileThumb {
+            float: left;
+            margin-right: 20px;
+            max-width: 150px;
+            max-height: 150px;
+        }
+
+        .message {
+            margin: 1em 1em 1em 2em;
+            line-height: 1.3em;
+        }
+
+        /* Inline replies on index */
+        .summary {
+            color: #707070;
+            margin-left: 20px;
+        }
+
+        /* 4chan X Nav Mock */
+        #index-options {
+            display: block;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="index-options">
+        <select id="index-mode" name="Index Mode">
+            <option value="paged">Paged</option>
+            <option value="catalog">Catalog</option>
+        </select>
+    </div>
+
+    <!-- Mock Post Form -->
+    <div id="togglePostFormLink"><a href="#">Start a New Thread</a></div>
+    <form name="post" action="sys/post" method="post" enctype="multipart/form-data">
+        <table id="postForm" class="postForm" style="display:table;">
+            <tbody>
+                <tr>
+                    <td>Name</td>
+                    <td><input name="name" type="text" placeholder="Anonymous"></td>
+                </tr>
+                <tr>
+                    <td>Subject</td>
+                    <td><input name="sub" type="text"></td>
+                </tr>
+                <tr>
+                    <td>Comment</td>
+                    <td><textarea name="com" cols="48" rows="4"></textarea></td>
+                </tr>
+                <tr>
+                    <td>File</td>
+                    <td><input type="file" name="upfile"></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <hr>
+
+    <div class="board">
+
+        <!-- Thread 1 -->
+        <div class="thread" id="t105076684">
+            <div class="postContainer opContainer" id="pc105076684">
+                <div class="post op" id="p105076684">
+                    <div class="file" id="f105076684">
+                        <a href="#" target="_blank" class="fileThumb"><img src="https://via.placeholder.com/150"
+                                alt="File"></a>
+                    </div>
+                    <div class="postInfo desktop" id="pi105076684">
+                        <input type="checkbox" name="105076684" value="delete">
+                        <span class="subject">/g/ Welcome</span>
+                        <span class="nameBlock"><span class="name">Anonymous ## Mod</span> </span>
+                        <span class="dateTime">04/25/25(Fri)16:24:10</span>
+                        <span class="postNum desktop"><a href="#">No.105076684</a></span>
+                    </div>
+                    <blockquote class="postMessage" id="m105076684">
+                        This board is for the discussion of technology.<br>
+                        Read the rules.
+                    </blockquote>
+                </div>
+            </div>
+            <!-- Replies shown on index -->
+            <span class="summary">+ 2 posts and 2 image replies omitted. Click here to view.</span>
+            <div class="postContainer replyContainer" id="pc107715958">
+                <div class="post reply" id="p107715958">
+                    <div class="postInfo">...</div>
+                    <blockquote>Some index reply</blockquote>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Thread 2 -->
+        <div class="thread" id="t107601582">
+            <div class="postContainer opContainer" id="pc107601582">
+                <div class="post op" id="p107601582">
+                    <div class="file" id="f107601582">
+                        <a href="#" target="_blank" class="fileThumb"><img src="https://via.placeholder.com/150/0000FF"
+                                alt="File"></a>
+                    </div>
+                    <div class="postInfo desktop" id="pi107601582">
+                        <input type="checkbox" name="107601582" value="delete">
+                        <span class="subject">Cyber-Punk/Security API</span>
+                        <span class="nameBlock"><span class="name">Anonymous</span> </span>
+                        <span class="dateTime" data-utc="1745422973">12/19/25(Fri)07:42:53</span>
+                        <span class="postNum desktop"><a href="#">No.107601582</a></span>
+                    </div>
+                    <blockquote class="postMessage" id="m107601582">
+                        Arguing that you don't care about privacy because you have nothing to hide...<br>
+                        --Edward Snowden
+                    </blockquote>
+                </div>
+            </div>
+            <!-- Replies shown on index -->
+            <div class="postContainer replyContainer" id="pc107722124">
+                <div class="post reply" id="p107722124">
+                    <div class="postInfo">...</div>
+                    <blockquote>Another reply visible on index</blockquote>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
