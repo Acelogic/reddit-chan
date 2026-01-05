@@ -6,6 +6,10 @@
 // @author       Antigravity
 // @match        *://boards.4chan.org/*
 // @grant        none
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=4chan.org
+// @updateURL    https://raw.githubusercontent.com/<YOUR_USERNAME>/reddit-chan/main/reddit-chan.user.js
+// @downloadURL  https://raw.githubusercontent.com/<YOUR_USERNAME>/reddit-chan/main/reddit-chan.user.js
+// @homepageURL  https://github.com/<YOUR_USERNAME>/reddit-chan
 // ==/UserScript==
 
 (function() {
