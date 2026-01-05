@@ -9,7 +9,7 @@ A Tampermonkey userscript that allows you to view 4chan threads and the catalog 
 - **Text Size Control**: Adjustable text size (S/M/L).
 
 ## Installation
-**[Click Here to Install](https://raw.githubusercontent.com/<YOUR_USERNAME>/reddit-chan/main/reddit-chan.user.js)**
+**[Click Here to Install](https://raw.githubusercontent.com/Acelogic/reddit-chan/master/reddit-chan.user.js)**
 
 1. Install the [Tampermonkey](https://www.tampermonkey.net/) browser extension.
 2. Click the link above. Tampermonkey will automatically detect the userscript and ask if you want to install it.
